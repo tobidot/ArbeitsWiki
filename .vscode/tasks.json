@@ -4,6 +4,34 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "build_cpp_and_run",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "./tools/css_optimizer/css_optimizer.cpp",
+                "-o ./tools/css_optimizer/css_optimizer.exe"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "run_cpp",
+            "type": "shell",
+            "command": "./tools/css_optimizer/css_optimizer.exe",
+            "args": [
+                "./tools/css_optimizer/test.css"
+            ],
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "build_cpp",
+            "type": "shell",
+            "command": "g++ ./tools/css_optimizer/css_optimizer.cpp -o ./tools/css_optimizer/css_optimizer.exe",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
             "label": "build_n_show",
             "type": "shell",
             "command": "php index.php > index.html ; ./chrome.lnk File:///F:/Dateien/Projects/Internet/ArbeitsWiki/index.html",
